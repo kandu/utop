@@ -9,7 +9,6 @@
 
 [@@@warning "-27"]
 
-open CamomileLibraryDefault.Camomile
 open Lwt_react
 open LTerm_text
 open LTerm_geom
@@ -448,7 +447,7 @@ let make_prompt ui profile count size key_sequence (recording, macro_count, macr
               txta;
               Array.make
                 (size.cols - Array.length txta - Array.length txtb)
-                (Zed_char.unsafe_of_uChar (UChar.of_int 0x2500), { none with foreground = Some (color lcyan blue); bold = Some bold });
+                (Zed_char.unsafe_of_uChar (Uchar.of_int 0x2500), { none with foreground = Some (color lcyan blue); bold = Some bold });
               txtb;
             ]
         ) second_line
